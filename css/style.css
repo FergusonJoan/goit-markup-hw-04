@@ -172,19 +172,18 @@ body {
     margin-right: auto;
 }
 .overlay {
+    padding-bottom: 200px;
+    padding-top: 200px;
     max-width: 1600px;
-    height: 600px;
     margin-left: auto;
     margin-right: auto;
-
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url("../images/cover.jpg");
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-size: contain 0;
 }
 .hero-title {
-    padding-top: 200px;
     margin-top: 0;
     margin-bottom: 30px;
 
@@ -324,7 +323,7 @@ body {
     color: var(--social-color);
 }
 .social-link:hover,
-.footer-link {
+.social-link:focus {
     background-color: var(--accent-color);
     color: #ffffff;
 }
@@ -333,9 +332,6 @@ body {
 }
 /* CLIENTS */
 
-.clients-container {
-    margin-right: 23px;
-}
 .clients-list {
     display: flex;
     align-items: center;
@@ -347,20 +343,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 92px;
-    min-width: 170px;
     border: 1px solid var(--social-color);
     border-radius: 4px;
+    padding: 16px 32px;
+    color: var(--social-color);
 }
 .clients-icon {
     fill: var(--social-color);
 }
-.clients-icon:hover {
+.clients-link:hover,
+.clients-link:focus,
+.clients-icon:hover,
+.clients-icon:focus {
+    border-color: var(--accent-color);
     fill: var(--accent-color);
 }
-.clients-link:hover {
-    border: 1px solid var(--accent-color);
-}
+
 /* FILTER */
 .button {
     min-width: 73px;
@@ -442,11 +440,10 @@ body {
 }
 .site-footer {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 70px;
 }
-.box {
-}
+
 .bottom-logo {
     display: block;
     margin-bottom: 20px;
